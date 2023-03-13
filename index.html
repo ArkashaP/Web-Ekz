@@ -14,17 +14,68 @@
         <div>
             <a href="" ><img src="img/site-main-text.png" alt="Main Site" ></a>
         </div>
+        
         <div class="menu-buttons">
-            <button>RU</button>
-            <button><img src="svg/menu-icon.svg" alt=""></button>
+            <button class="lang-button">RU</button>
+            <button class="menu-button"><img src="svg/menu-icon.svg" alt=""></button>
+            <nav>
+                <ul>
+                    <li><a href="">Трек-дни</a></li>
+                    <li><a href="">Сертификаты</a></li>
+                    <li><a href="">Как проходят заезды</a></li>
+                    <li><button>RU</button></li>
+                </ul>
+            </nav>
         </div>
     </header>
     <main>
         <h1>Landing page of ReadyOn site</h1>
-        <section>
+        <section class="main-article">
             <h2><small>ТРЕК-ДНИ</small>
-                Hello
+                <br>С READYONE
             </h2>
+            <div>
+                <img src="svg/first-article-text-icon.svg" alt="text-icon">
+                <p>Не просто аренда спорткара, а настоящее 
+                    погружение в мир автоспорта</p>
+            </div>
+            <button>ЗАКАЗАТЬ</button>
+        </section>
+        <section class="order_form">
+            <h2><small>Задание 2</small></h2>
+            <form method="POST" action="//httpbin.org/post" method="post">
+                <input type="hidden" name="form-name" value="order" />
+                <div>
+                    <fieldset>
+                        <legend>Заказ</legend>
+                        <fieldset >
+                            <label>
+                                Наименование товара:
+                                <input type="text" required="" name="name"  placeholder="Наименование" />
+                            </label>
+                        </fieldset>
+                        <fieldset>
+                            <label>
+                                Кол-во:
+                                <input type="number" required="" name="amount" min="1" placeholder="от 1 и более"/>
+                            </label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Доставка:</legend>
+                            <label>
+                                <input type="radio" name="order-type" value="Courier" checked />
+                                Курьер</label>
+                            <label>
+                                <input type="radio" name="order-type" value="Yourself" required />
+                                Самовывоз</label>
+                        </fieldset>
+                    </fieldset>
+                </div>
+                <div>
+                    <button type="reset">Сбросить</button>
+                    <button type="submit">Отправить</button>
+                </div>
+            </form>
         </section>
     </main>
 </body>
